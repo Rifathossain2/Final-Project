@@ -3,16 +3,16 @@
 #include<GL/glut.h>
 #include <GL/gl.h>
 #include <stdlib.h>
-#define SPEED 40.0                  //speed of traffic
-float i=0.0;                        //movement of car
-float m=0.0;                        //movement of clouds
-float n=0.0;                        //movement of plane along x-axis
-float o=0.0;                        //  and y-axis
-float c=0.0;                        //movement of comet	SS
-int light=1;                        //1 for green-light, 0 for red-light
-int day=1;                          //1 for day ,0 for night
-int plane=0;                        //1 for plane
-int comet=0;                        //1 for comet
+#define SPEED 40.0               
+float i=0.0;                     
+float m=0.0;                   
+float n=0.0;          
+float o=0.0;                    
+float c=0.0;                       
+int light=1;                     
+int day=1;                        
+int plane=0;                     
+int comet=0;                       
 void draw_pixel(GLint cx, GLint cy)
 {
 	glBegin(GL_POINTS);
@@ -86,7 +86,7 @@ glBegin(GL_LINE_LOOP);
 	glVertex2f(1050+n,650+o);
 	glVertex2f(1010+n,625+o);
 glEnd();
-}                                    //cloud1
+}                                //cloud1
 	for(l=0;l<=20;l++)
 	{
 		glColor3f(1.0,1.0,1.0);
@@ -103,7 +103,7 @@ glEnd();
 		glColor3f(1.0,1.0,1.0);
 		draw_circle(265+m,625,l);
 	}
-                                    //cloud2
+                               //cloud2
 	for(l=0;l<=20;l++)
 	{
 		glColor3f(1.0,1.0,1.0);
@@ -123,7 +123,7 @@ for(l=0;l<=20;l++)
 		glColor3f(1.0,1.0,1.0);
 		draw_circle(500+m,615,l);
 }
-                                    //grass
+                                  //grass
 glColor3f(0.0,0.9,0.0);
 glBegin(GL_POLYGON);
 glVertex2f(0,160);
@@ -132,7 +132,7 @@ glVertex2f(1100,450);
 glVertex2f(1100,160);
 glEnd();
 
-                                    //pond
+                                  //pond
 glColor3f(0.0,0.9,0.9);
 glBegin(GL_POLYGON);
 glVertex2f(25,350);
@@ -160,7 +160,7 @@ glVertex2f(50,310);
 glEnd();
 }
 else
-{                                    //sky
+{                             //sky
 glColor3f(0.0,0.0,0.0);
 glBegin(GL_POLYGON);
 glVertex2f(0,450);
@@ -196,7 +196,7 @@ glVertex2f(975,632);
 glVertex2f(970,640);
 glVertex2f(980,640);
 glEnd();
-                                    //star3
+                             //star3
 glColor3f(1.0,1.0,1.0);
 glBegin(GL_TRIANGLES);
 glVertex2f(875,543);
@@ -236,7 +236,7 @@ glVertex2f(200,618);
 glVertex2f(195,625);
 glVertex2f(205,625);
 glEnd();
-                                    //star7
+                             //star7
 glColor3f(1.0,1.0,1.0);
 glBegin(GL_TRIANGLES);
 glVertex2f(500,543);
@@ -261,7 +261,7 @@ glColor3f(1.0,1.0,1.0);
 	glVertex2f(300+c,668);
 	glEnd();
 }
-                                    //Plane
+                        //Plane
 if(plane==1)
 {
 	for(l=0;l<=1;l++)
@@ -272,7 +272,7 @@ if(plane==1)
 		draw_circle(954+n,623+o,l);
 	}
 }
-                                    //grass
+                           //grass
 glColor3f(0.0,0.3,0.0);
 glBegin(GL_POLYGON);
 glVertex2f(0,160);
@@ -280,7 +280,7 @@ glVertex2f(0,450);
 glVertex2f(1100,450);
 glVertex2f(1100,160);
 glEnd();
-                                    //pond
+                           //pond
 glColor3f(0.0,0.0,0.4);
 glBegin(GL_POLYGON);
 glVertex2f(25,350);
@@ -323,7 +323,7 @@ glVertex2f(0,150);
 glVertex2f(1100,150);
 glVertex2f(1100,0);
 glEnd();
-                                    //tree
+                         //tree
 glColor3f(0.9,0.2,0.0);
 glBegin(GL_POLYGON);
 glVertex2f(350,325);
@@ -355,7 +355,7 @@ glEnd();
 		glColor3f(0.0,0.5,0.0);
 		draw_circle(360,465,l);
 	}
-                                    //back compound
+                          //back compound
 glColor3f(0.9,0.9,0.9);
 glBegin(GL_POLYGON);
 glVertex2f(550,375);
@@ -363,7 +363,7 @@ glVertex2f(600,425);
 glVertex2f(825,425);
 glVertex2f(850,375);
 glEnd();
-                                    //house
+                      //house
 glColor3f(0.0,0.2,0.2);
 glBegin(GL_POLYGON);
 glVertex2f(600,375);
@@ -372,7 +372,7 @@ glVertex2f(650,525);
 glVertex2f(700,450);
 glVertex2f(700,375);
 glEnd();
-                                    //door
+                        //door
 glColor3f(0.5,0.0,0.0);
 glBegin(GL_POLYGON);
 glVertex2f(640,375);
@@ -380,7 +380,7 @@ glVertex2f(640,410);
 glVertex2f(660,410);
 glVertex2f(660,375);
 glEnd();
-                                    //roof
+                          //roof
 glColor3f(0.5,0.0,0.0);
 glBegin(GL_POLYGON);
 glVertex2f(700,450);
@@ -388,7 +388,7 @@ glVertex2f(650,525);
 glVertex2f(750,525);
 glVertex2f(780,450);
 glEnd();
-                                    //
+                                    
 glColor3f(0.8,0.8,0.2);
 glBegin(GL_POLYGON);
 glVertex2f(700,375);
@@ -412,7 +412,7 @@ glVertex2f(550,375);
 glVertex2f(850,375);
 glVertex2f(850,325);
 glEnd();
-                                    //gate using mesh
+                     //gate using mesh
 int a,b;
 float x[3],y[3];
 float x0=600,y0=325;;
@@ -432,7 +432,7 @@ for(b=0;b<2;b++)
 	 glVertex2f(x[a+1],y[b]);
 	glEnd();
  }
-                                    //signal
+                          //signal
 	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 		glVertex2f(1060,160);
@@ -456,7 +456,7 @@ for(b=0;b<2;b++)
 		glColor3f(0.0,0.0,0.0);
 		draw_circle(1065,375,l);
 	}
-                                    //car 1
+                           //car 1
 glColor3f(0.9,1.2,1.0);
 glBegin(GL_POLYGON);
 glVertex2f(25+i,50);
@@ -467,7 +467,7 @@ glVertex2f(200+i,125);
 glVertex2f(250+i,115);
 glVertex2f(250+i,50);
 glEnd();
-                                    //windows
+              //windows
 glColor3f(0.1,0.1,0.1);
 glBegin(GL_POLYGON);
 glVertex2f(35+i,125);
